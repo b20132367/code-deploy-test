@@ -1,12 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /home/ubuntu/code-deploy-test
+  - source: /scripts
+    destination: /home/ubuntu/scripts
 hooks:
   AfterInstall:
-    - location: scripts/after_install.sh
+    - location: /home/ubuntu/scripts/after_install.sh
       timeout: 300
   ApplicationStart:
-    - location: scripts/application_start.sh
+    - location: /home/ubuntu/scripts/application_start.sh
       timeout: 300
